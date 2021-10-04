@@ -13,20 +13,22 @@ const ProductList = ({ type }) => {
   const { cart } = useContext(CartContext);
 
   return (
-    <ul>
-      {type === "catalogue" &&
-        catalogue.map((item, index) => {
-          <li key={index}>
-            {item.name} <Button type={type} item />
-          </li>;
-        })}
-      {type === "cart" &&
-        cart.map((item, index) => {
-          <li key={index}>
-            {item.name} <Button type={type} item={item} />
-          </li>;
-        })}
-    </ul>
+    <Container>
+      <List>
+        {type === "catalogue" &&
+          catalogue.map((item, index) => (
+            <li key={index}>
+              <p>{item.name}</p> <Button type={type} item={item} />
+            </li>
+          ))}
+        {type === "cart" &&
+          cart.map((item, index) => (
+            <li key={index}>
+              <p>{item.name}</p> <Button type={type} item={item} />
+            </li>
+          ))}
+      </List>
+    </Container>
   );
 };
 

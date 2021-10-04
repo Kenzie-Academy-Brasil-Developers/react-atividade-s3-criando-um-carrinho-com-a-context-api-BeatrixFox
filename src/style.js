@@ -5,4 +5,5 @@ export const Container = styled.div`
   font-size: 20px;
   background-color: aliceblue;
   height: 100vh;
+  text-align: center;
 `;

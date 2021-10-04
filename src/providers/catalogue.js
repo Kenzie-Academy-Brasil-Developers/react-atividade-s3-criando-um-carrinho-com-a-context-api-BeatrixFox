@@ -21,7 +21,7 @@ export const CatalogueProvider = ({ children }) => {
   };
   return (
     <CatalogueContext.Provider
-      valeu={{ catalogue, addToCatalogue, removeToCatalogue }}
+      value={{ catalogue, addToCatalogue, removeToCatalogue }}
     >
       {children}
     </CatalogueContext.Provider>
